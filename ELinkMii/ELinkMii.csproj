@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Configurations>Debug-Switch;Release-Switch;Debug-3DS;Release-3DS</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Switch|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE;PLATFORM_SWITCH</DefineConstants>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Switch|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE;PLATFORM_SWITCH</DefineConstants>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-3DS|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE;PLATFORM_3DS</DefineConstants>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-3DS|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE;PLATFORM_3DS</DefineConstants>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

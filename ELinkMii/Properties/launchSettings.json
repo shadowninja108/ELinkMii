@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "Extract Switch": {
+      "commandName": "Project",
+      "commandLineArgs": "extract \"Z:\\Switch\\Games\\Miitopia\\1.0.3\\romfs\\cmn\\elink\\elink.elk\""
+    },
+    "Extract 3DS": {
+      "commandName": "Project",
+      "commandLineArgs": "extract \"C:\\Users\\shado\\Downloads\\elink.elk\""
+    },
+    "Package Switch": {
+      "commandName": "Project",
+      "commandLineArgs": "package \"Z:\\Switch\\Games\\Miitopia\\1.0.3\\romfs\\cmn\\elink\\elink.elk (extracted)\\\\\""
+    },
+    "Package 3DS": {
+      "commandName": "Project",
+      "commandLineArgs": "package \"C:\\Users\\shado\\Downloads\\elink.elk (extracted)\\\\\""
+    }
+  }
+}
